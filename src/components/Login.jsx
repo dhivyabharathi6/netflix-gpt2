@@ -13,7 +13,7 @@ const Login = () => {
        <h2 className='font-bold text-3xl py-4'>Sign In</h2>
         <input className="p-4 my-4  bg-gray-600 w-full text-sm rounded-sm" type='text' placeholder='Email Address' />
          <input className="p-4 my-4  bg-gray-600  w-full text-sm rounded-sm"type='password' placeholder='Password' />
-         <button className='p-4 my-6  bg-red-700 bg-opacity-70  w-full text-sm rounded-sm' >Sign in</button>
+         <button className='p-4 my-6  bg-red-700 bg-opacity-80  w-full text-sm rounded-sm' >Sign in</button>
       </form>
      
     </div>
