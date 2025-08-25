@@ -10,7 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { removeUser ,addUser} from "../utils/userSlice";
-import { AVATAR_URL } from "../utils/constants";
+import { AVATAR_URL, BG_URL } from "../utils/constants";
 
 const Login = () => {
   const [issignin, setissignin] = useState(true);
@@ -93,9 +93,9 @@ const Login = () => {
       <div className="absolute ">
         <img
           className="h-screen"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/a927b1ee-784d-494a-aa80-cf7a062d2523/web/IN-en-20250714-TRIFECTA-perspective_5acb7337-c372-45ec-ae12-ddb110e6ad78_large.jpg"
+          src={BG_URL}
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
