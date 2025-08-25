@@ -5,26 +5,23 @@ import { useDispatch } from 'react-redux'
 import { addNowPlaying } from '../utils/movieSlics'
 import Maincontainer from './Maincontainer'
 import Secondcontainer from './Secondcontainer'
+import useNowplaying from '../customhook/useNowplaying'
+import Videotitle from './Videotitle'
+import usePopular from '../customhook/usePopular'
+import useToprated from '../customhook/useToprated'
+import useUpcoming from '../customhook/useUpcoming'
 
 
 
 const Browse = () => {
-  let dispatch = useDispatch()
-    const getNowplayMov = async()=>{
-    let movies = await fetch("https://api.themoviedb.org/3/movie/now_playing?page=1",API_OPTIONS)
   
-    let json = await movies.json()
-     console.log(json)
-    dispatch(addNowPlaying(json.results))
-    }
-
-  useEffect(()=>{
-    getNowplayMov()
-  },[])
-
+useNowplaying()
+usePopular()
+useToprated()
+useUpcoming()
   
   return (
-    <div>
+    <div >
          <Headers/>
          <Maincontainer/>
          <Secondcontainer/>
