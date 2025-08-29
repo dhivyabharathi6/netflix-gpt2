@@ -20,4 +20,5 @@ export const  LANGUAGES = [
    {identifier :"chinese" , name :"Chinese"}
   ]
 
-//export const GPT_API_KEY= "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"
+
+export const GPT_API_KEY = process.env.REACT_APP_GPT_API_KEY
