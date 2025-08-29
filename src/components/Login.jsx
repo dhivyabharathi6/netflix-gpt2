@@ -92,7 +92,7 @@ const Login = () => {
       <Headers />
       <div className="absolute ">
         <img
-          className="h-screen"
+          className="h-screen w-screen"
           src={BG_URL}
         />
         <div className="absolute inset-0 bg-black/60"></div>

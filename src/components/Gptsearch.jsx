@@ -11,7 +11,7 @@ const Gptsearch = () => {
     <div className='bg-white '>
         <div className="absolute  ">
         <img
-          className="h-screen object-cover"
+          className="h-screen object-cover w-screen"
           src={BG_URL}
         />
         <div className="absolute inset-0 bg-black/60"></div>
