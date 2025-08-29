@@ -14,7 +14,7 @@ const movieSlice = createSlice({
             state.nowPlaying = action.payload
         },
         addTrailer :(state,action)=>{
-            state.trailer =action.payload
+            state.trailer=action.payload
         },
         addPopular: (state,action)=>{
             state.popular=action.payload

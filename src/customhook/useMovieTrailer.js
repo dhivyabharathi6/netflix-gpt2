@@ -5,14 +5,22 @@ import { useEffect } from "react";
 
 let useMovieTrailer =(movie_id)=>{
    
-  
+  console.log(movie_id)
   let dispatch= useDispatch()
+     if (!movie_id) return;
+
   let getvideos = async () => {
     let videos = await fetch(
       "https://api.themoviedb.org/3/movie/" + movie_id + "/videos",
       API_OPTIONS
     );
     let mvideos = await videos.json();
+
+    if (!mvideos || !Array.isArray(mvideos.results) || mvideos.results.length === 0) {
+          console.warn("No video results found");
+          return;
+        }
+
  
   
     let trailers = mvideos.results.filter((videos) => videos?.type == "Trailer");
@@ -24,7 +32,7 @@ let useMovieTrailer =(movie_id)=>{
 
   useEffect(() => {
     getvideos();
-  }, []);
+  }, [movie_id]);
 }
 
 export default useMovieTrailer

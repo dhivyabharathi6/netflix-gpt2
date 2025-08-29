@@ -8,10 +8,10 @@ const Gptsearch = () => {
 
     
   return (
-    <div className='bg-white'>
+    <div className='bg-white '>
         <div className="absolute  ">
         <img
-          className="h-screen"
+          className="h-screen object-cover"
           src={BG_URL}
         />
         <div className="absolute inset-0 bg-black/60"></div>

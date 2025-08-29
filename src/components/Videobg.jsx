@@ -4,9 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTrailer } from "../utils/movieSlics";
 import useMovieTrailer from "../customhook/useMovieTrailer";
 
-const Videobg = ({ movie_id }) => {
+const Videobg = ({ movie }) => {
+ console.log(movie)
+  useMovieTrailer(movie?.id);
   const trailervid = useSelector((store) => store.movie?.trailer);
-  useMovieTrailer(movie_id);
+  console.log(trailervid)
+   if (!trailervid) {
+    return <div className="w-screen aspect-video bg-black">Loading</div>; 
+    // black placeholder while loading
+  }
   return (
     <div className="absolute">
       <iframe
