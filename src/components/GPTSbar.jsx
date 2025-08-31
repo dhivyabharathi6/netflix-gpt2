@@ -5,13 +5,12 @@ import lang from "../utils/langConstant";
 import openai from "../utils/openai";
 
 const GPTSbar = () => {
-  let searchtext = useRef();
+  let searchtext = useRef(null);
   let langkey = useSelector((store) => store.config.language);
 
   let handlegptsearch = async () => {
-
-
-    let gptQuery = "Act as a Movie Recommendation system and suggest some movies for the query :"+searchtext.current.value +". only give me names of 5 movies , comma Seperated like the example result give ahead . Example Result : Gadar, Sholay, Don, Golmaal, Kol Mil Gaya"
+    console.log(searchtext.current.value)
+    let gptQuery = "Act as a Movie Recommendation system and suggest some movies for the query :"+ searchtext.current.value +". only give me names of 5 movies , comma Seperated like the example result give ahead . Example Result : Gadar, Sholay, Don, Golmaal, Kol Mil Gaya"
     const gptResults = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
