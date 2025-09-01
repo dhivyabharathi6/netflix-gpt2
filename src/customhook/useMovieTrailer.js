@@ -5,7 +5,6 @@ import { useEffect } from "react";
 
 let useMovieTrailer =(movie_id)=>{
    
-  console.log(movie_id)
   let dispatch= useDispatch()
      if (!movie_id) return;
 
@@ -17,7 +16,7 @@ let useMovieTrailer =(movie_id)=>{
     let mvideos = await videos.json();
 
     if (!mvideos || !Array.isArray(mvideos.results) || mvideos.results.length === 0) {
-          console.warn("No video results found");
+      
           return;
         }
 

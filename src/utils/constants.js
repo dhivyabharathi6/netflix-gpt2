@@ -20,4 +20,4 @@ export const  LANGUAGES = [
    {identifier :"chinese" , name :"Chinese"}
   ]
 
-  export const GPT_KEY = process.env.REACT_APP_GPT_KEY
+  export const GPT_KEY = import.meta.env.VITE_GPT_KEY
